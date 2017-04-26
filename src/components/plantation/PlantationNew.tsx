@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Plantation } from "./Plantation";
 
-export interface PlantationNewProps { match: any; onSubmit: any; }
+export interface PlantationNewProps { onSubmit: any; }
 
 export class PlantationNew extends React.Component<PlantationNewProps, Plantation> {
 
@@ -30,7 +30,7 @@ export class PlantationNew extends React.Component<PlantationNewProps, Plantatio
     render() {
 
         return (
-            <form onSubmit={e => { this.handleSubmit(e) }}>
+            <form onSubmit={e => { e.preventDefault(); this.handleSubmit(e) }}>
 
                 <div className="form-group col-sm-8">
 
@@ -54,7 +54,7 @@ export class PlantationNew extends React.Component<PlantationNewProps, Plantatio
 
                 </div>
 
-                <div className="form-group col-sm-8">
+                <div className="form-group col-sm-6">
 
                     <label>Plantado em:</label>
 
@@ -65,7 +65,7 @@ export class PlantationNew extends React.Component<PlantationNewProps, Plantatio
 
                 </div>
 
-                <div className="form-group col-sm-8">
+                <div className="form-group col-sm-6">
 
                     <label>Colher em:</label>
 
@@ -87,10 +87,9 @@ export class PlantationNew extends React.Component<PlantationNewProps, Plantatio
 
                 </div>
 
-
-
-                <input type="submit" value="Submit" className="btn btn-info" />
-
+                <div className="col-sm-12">
+                    <input type="submit" value="Submit" className="btn btn-info" />
+                </div>
 
             </form>
         );
@@ -110,7 +109,9 @@ export class PlantationNew extends React.Component<PlantationNewProps, Plantatio
     handleSubmit(event: any) {
         console.log('submitted: ', this.state);
         this.props.onSubmit(this.state);
-        event.preventDefault();
+
+        window.history.back();
+
     }
 
 
