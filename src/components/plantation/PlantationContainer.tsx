@@ -67,6 +67,7 @@ export class PlantationContainer extends React.Component<PlantationContainerProp
 
                     return <PlantationProfile
                         plantation={newPlantation}
+                        canHarvest={false}
                         onSubmit={(p: Plantation) => { this.addPlantation(p) }} />
 
                 }}
@@ -120,6 +121,7 @@ export class PlantationContainer extends React.Component<PlantationContainerProp
         });
 
         return <PlantationProfile plantation={plantation}
+            canHarvest={true}
             onSubmit={(p: Plantation) => { this.updatePlantation(p) }}
         />
 

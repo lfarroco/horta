@@ -17098,7 +17098,7 @@ var Navbar = (function (_super) {
                                         " Adicionar Planta\u00E7\u00E3o")))),
                         React.createElement("li", null,
                             React.createElement(react_router_dom_1.Link, { to: "/harvests" },
-                                React.createElement("span", { className: "glyphicon glyphicon-box", "aria-hidden": "true" }),
+                                React.createElement("span", { className: "glyphicon glyphicon-inbox", "aria-hidden": "true" }),
                                 "  Colheitas"))),
                     React.createElement("ul", { className: "nav navbar-nav navbar-right" },
                         React.createElement("li", { className: "active" },
@@ -17282,7 +17282,7 @@ var PlantationContainer = (function (_super) {
                 } }),
             React.createElement(react_router_dom_1.Route, { path: '/new/plantation', component: function (params) {
                     var newPlantation = new Plantation_1.Plantation();
-                    return React.createElement(PlantationProfile_1.PlantationProfile, { plantation: newPlantation, onSubmit: function (p) { _this.addPlantation(p); } });
+                    return React.createElement(PlantationProfile_1.PlantationProfile, { plantation: newPlantation, canHarvest: false, onSubmit: function (p) { _this.addPlantation(p); } });
                 } }));
     };
     PlantationContainer.prototype.addPlantation = function (plantation) {
@@ -17313,7 +17313,7 @@ var PlantationContainer = (function (_super) {
                 return true;
             }
         });
-        return React.createElement(PlantationProfile_1.PlantationProfile, { plantation: plantation, onSubmit: function (p) { _this.updatePlantation(p); } });
+        return React.createElement(PlantationProfile_1.PlantationProfile, { plantation: plantation, canHarvest: true, onSubmit: function (p) { _this.updatePlantation(p); } });
     };
     return PlantationContainer;
 }(React.Component));
@@ -17417,6 +17417,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
+var react_router_dom_1 = __webpack_require__(9);
 var react_datepicker_1 = __webpack_require__(160);
 var PlantationProfile = (function (_super) {
     __extends(PlantationProfile, _super);
@@ -17428,26 +17429,36 @@ var PlantationProfile = (function (_super) {
     }
     PlantationProfile.prototype.render = function () {
         var _this = this;
-        return React.createElement("form", { onSubmit: function (e) { e.preventDefault(); _this.handleSubmit(e); } },
-            React.createElement("div", { className: "form-group col-sm-12" },
+        var harvestBtn;
+        if (this.props.canHarvest)
+            harvestBtn = React.createElement(react_router_dom_1.Link, { to: "/harvest/" + this.state.id, className: "btn btn-success pull-right" },
+                React.createElement("span", { className: "glyphicon glyphicon-inbox", "aria-hidden": "true" }),
+                "  Colher");
+        return React.createElement("form", { onSubmit: function (e) {
+                _this.handleSubmit(e);
+            } },
+            React.createElement("div", { className: "form-group" },
                 React.createElement("div", { className: "btn btn-default", onClick: this.back },
                     React.createElement("span", { className: "glyphicon glyphicon-chevron-left" }),
-                    " Voltar")),
-            React.createElement("div", { className: "form-group col-sm-8" },
+                    " Voltar"),
+                harvestBtn),
+            React.createElement("div", { className: "form-group" },
                 React.createElement("label", null, "Tipo:"),
                 React.createElement("input", { type: "text", value: this.state.type, name: "type", className: "form-control", onChange: function (e) { _this.handleInputChange(e); } })),
-            React.createElement("div", { className: "form-group col-xs-6" },
-                React.createElement("label", null, "Plantado em:"),
-                React.createElement(react_datepicker_1.default, { dateFormat: "DD/MM/YYYY", locale: "pt-br", className: "form-control", selected: this.state.dateStart, onChange: function (e) { _this.handleDateChange(e, 'start'); } })),
-            React.createElement("div", { className: "form-group col-xs-6" },
-                React.createElement("label", null, "Colher em:"),
-                React.createElement(react_datepicker_1.default, { dateFormat: "DD/MM/YYYY", locale: "pt-br", className: "form-control", selected: this.state.dateEnd, onChange: function (e) { _this.handleDateChange(e, 'end'); } })),
-            React.createElement("div", { className: "form-group col-xs-6" },
-                React.createElement("label", null, "Quantidade:"),
-                React.createElement("input", { type: "number", value: this.state.quantity, name: "quantity", className: "form-control", onChange: function (e) { _this.handleInputChange(e); } })),
-            React.createElement("div", { className: "form-group col-xs-6" },
-                React.createElement("label", null, "Unidade"),
-                React.createElement("input", { type: "text", value: this.state.unit, name: "unit", className: "form-control", onChange: function (e) { _this.handleInputChange(e); } })),
+            React.createElement("div", { className: "form-group row" },
+                React.createElement("div", { className: "col-xs-6" },
+                    React.createElement("label", null, "Plantado em:"),
+                    React.createElement(react_datepicker_1.default, { dateFormat: "DD/MM/YYYY", locale: "pt-br", className: "form-control", selected: this.state.dateStart, onChange: function (e) { _this.handleDateChange(e, 'start'); } })),
+                React.createElement("div", { className: "col-xs-6" },
+                    React.createElement("label", null, "Colher em:"),
+                    React.createElement(react_datepicker_1.default, { dateFormat: "DD/MM/YYYY", locale: "pt-br", className: "form-control", selected: this.state.dateEnd, onChange: function (e) { _this.handleDateChange(e, 'end'); } }))),
+            React.createElement("div", { className: "form-group row" },
+                React.createElement("div", { className: "col-xs-6" },
+                    React.createElement("label", null, "Quantidade:"),
+                    React.createElement("input", { type: "number", value: this.state.quantity, name: "quantity", className: "form-control", onChange: function (e) { _this.handleInputChange(e); } })),
+                React.createElement("div", { className: "col-xs-6" },
+                    React.createElement("label", null, "Unidade"),
+                    React.createElement("input", { type: "text", value: this.state.unit, name: "unit", className: "form-control", onChange: function (e) { _this.handleInputChange(e); } }))),
             React.createElement("input", { type: "submit", value: "Salvar", className: "btn btn-info" }));
     };
     PlantationProfile.prototype.back = function () {
@@ -17463,7 +17474,7 @@ var PlantationProfile = (function (_super) {
         var _a;
     };
     PlantationProfile.prototype.handleSubmit = function (event) {
-        console.log('submitted: ', this.state);
+        event.preventDefault();
         this.props.onSubmit(this.state);
         window.history.back();
     };

@@ -28,7 +28,10 @@ export class Navbar extends React.Component<undefined, undefined> {
                         <li className="dropdown">
 
                             <a href="#" className="dropdown-toggle"
-                                data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span className="glyphicon glyphicon-leaf" aria-hidden="true"></span> Plantações<span className="caret"></span></a>
+                                data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span className="glyphicon glyphicon-leaf" aria-hidden="true"></span> Plantações
+                                    <span className="caret"></span>
+                            </a>
 
                             <ul className="dropdown-menu">
 
@@ -40,7 +43,7 @@ export class Navbar extends React.Component<undefined, undefined> {
                             </ul>
 
                         </li>
-                        <li><Link to="/harvests"><span className="glyphicon glyphicon-box" aria-hidden="true"></span>  Colheitas</Link></li>
+                        <li><Link to="/harvests"><span className="glyphicon glyphicon-inbox" aria-hidden="true"></span>  Colheitas</Link></li>
 
 
                     </ul>

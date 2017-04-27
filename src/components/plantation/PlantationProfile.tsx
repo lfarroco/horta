@@ -1,12 +1,13 @@
 import * as React from "react";
 
 import { Plantation } from "./Plantation";
-
-export interface PlantationProfileProps { plantation: Plantation; onSubmit: any; }
-export interface PlantationProfileState { plantation: Plantation; }
+import { Link } from "react-router-dom";
 
 import DatePicker from 'react-datepicker';
 import * as moment from 'moment';
+
+export interface PlantationProfileProps { plantation: Plantation; canHarvest: boolean; onSubmit: any; }
+export interface PlantationProfileState { plantation: Plantation; }
 
 export class PlantationProfile extends React.Component<PlantationProfileProps, Plantation> {
 
@@ -20,14 +21,26 @@ export class PlantationProfile extends React.Component<PlantationProfileProps, P
 
     render() {
 
-        return <form onSubmit={e => { e.preventDefault(); this.handleSubmit(e) }}>
+        var harvestBtn;
 
-            <div className="form-group col-sm-12">
-                <div className="btn btn-default" onClick={this.back}>
+        if (this.props.canHarvest)
+            harvestBtn = <Link to={`/harvest/${this.state.id}`} className="btn btn-success pull-right">
+                <span className="glyphicon glyphicon-inbox" aria-hidden="true"></span>  Colher</Link>;
+
+        return <form onSubmit={e => {
+            this.handleSubmit(e)
+        }}>
+
+            <div className="form-group">
+                <div className="btn btn-default"
+                    onClick={this.back}>
                     <span className="glyphicon glyphicon-chevron-left"></span> Voltar</div>
+
+                {harvestBtn}
+
             </div>
 
-            <div className="form-group col-sm-8">
+            <div className="form-group">
 
                 <label>Tipo:</label>
 
@@ -38,60 +51,63 @@ export class PlantationProfile extends React.Component<PlantationProfileProps, P
 
             </div>
 
-            <div className="form-group col-xs-6">
+            <div className="form-group row">
 
-                <label>Plantado em:</label>
+                <div className="col-xs-6">
 
-                <DatePicker
-                    dateFormat="DD/MM/YYYY"
-                    locale="pt-br"
-                    className="form-control"
-                    selected={this.state.dateStart}
-                    onChange={e => { this.handleDateChange(e, 'start') }}
-                />
+                    <label>Plantado em:</label>
 
-            </div>
+                    <DatePicker
+                        dateFormat="DD/MM/YYYY"
+                        locale="pt-br"
+                        className="form-control"
+                        selected={this.state.dateStart}
+                        onChange={e => { this.handleDateChange(e, 'start') }}
+                    />
 
-            <div className="form-group col-xs-6">
+                </div>
+                <div className="col-xs-6">
 
-                <label>Colher em:</label>
+                    <label>Colher em:</label>
 
-                <DatePicker
-                    dateFormat="DD/MM/YYYY"
-                    locale="pt-br"
-                    className="form-control"
-                    selected={this.state.dateEnd}
-                    onChange={e => { this.handleDateChange(e, 'end') }}
-                />
+                    <DatePicker
+                        dateFormat="DD/MM/YYYY"
+                        locale="pt-br"
+                        className="form-control"
+                        selected={this.state.dateEnd}
+                        onChange={e => { this.handleDateChange(e, 'end') }}
+                    />
 
-            </div>
-
-            <div className="form-group col-xs-6">
-
-                <label>Quantidade:</label>
-
-                <input type="number" value={this.state.quantity}
-                    name="quantity"
-                    className="form-control"
-                    onChange={e => { this.handleInputChange(e) }} />
+                </div>
 
             </div>
 
+            <div className="form-group row">
 
-            <div className="form-group col-xs-6">
+                <div className="col-xs-6">
 
-                <label>Unidade</label>
+                    <label>Quantidade:</label>
 
-                <input type="text" value={this.state.unit}
-                    name="unit"
-                    className="form-control"
-                    onChange={e => { this.handleInputChange(e) }} />
+                    <input type="number" value={this.state.quantity}
+                        name="quantity"
+                        className="form-control"
+                        onChange={e => { this.handleInputChange(e) }} />
+
+                </div>
+                <div className="col-xs-6">
+
+                    <label>Unidade</label>
+
+                    <input type="text" value={this.state.unit}
+                        name="unit"
+                        className="form-control"
+                        onChange={e => { this.handleInputChange(e) }} />
+
+                </div>
 
             </div>
-
 
             <input type="submit" value="Salvar" className="btn btn-info" />
-
 
         </form>
 
@@ -112,7 +128,9 @@ export class PlantationProfile extends React.Component<PlantationProfileProps, P
     }
 
     handleSubmit(event: any) {
-        console.log('submitted: ', this.state);
+
+        event.preventDefault();
+
         this.props.onSubmit(this.state);
 
         window.history.back();
