@@ -6,6 +6,8 @@ import {
     Link
 } from 'react-router-dom'
 
+import * as moment from 'moment';
+
 import { Plantation } from "./Plantation"
 import { PlantationList } from "./PlantationList"
 import { PlantationProfile } from "./PlantationProfile"
@@ -26,6 +28,13 @@ export class PlantationContainer extends React.Component<PlantationContainerProp
             storedPlantations = [];
         }
 
+        storedPlantations.forEach((p: Plantation) => {
+
+            p.dateStart = moment(p.dateStart);
+            p.dateEnd = moment(p.dateStart);
+
+        });
+
         this.state = {
             plantations: storedPlantations,
             selectedPlantation: undefined
@@ -38,30 +47,31 @@ export class PlantationContainer extends React.Component<PlantationContainerProp
         return <div>
 
             <Route exact path="/"
-                component={(match) =>
+                component={(params) =>
                     (<PlantationList plantations={this.state.plantations} />)}
             />
             <Route exact path="/plantations"
-                component={(match) =>
+                component={(params) =>
                     (<PlantationList plantations={this.state.plantations} />)}
             />
             <Route exact path="/plantation/:id"
-                component={(match) => {
-                    return this.viewPlantation(match);
+                component={(params) => {
+                    return this.viewPlantation(params);
                 }}
             />
 
-
             <Route path='/new/plantation'
-                component={(match) => {
+                component={(params) => {
 
                     var newPlantation = new Plantation();
 
-                    return <PlantationProfile plantation={newPlantation}
+                    return <PlantationProfile
+                        plantation={newPlantation}
                         onSubmit={(p: Plantation) => { this.addPlantation(p) }} />
 
                 }}
             />
+
         </div>
 
     }
@@ -87,16 +97,17 @@ export class PlantationContainer extends React.Component<PlantationContainerProp
 
         });
         this.setState({ plantations: plantations });
+
         localStorage.setItem('plantations', JSON.stringify(plantations));
 
     }
 
-    viewPlantation(match: any) {
+    viewPlantation(params: any) {
 
-        console.log('match::', match)
-        console.log('match.params::', match)
+        console.log('match::', params)
+        console.log('match.params::', params)
 
-        var id = match.match.params.id;
+        var id = params.match.params.id;
 
         var plantation;
         this.state.plantations.some(item => {

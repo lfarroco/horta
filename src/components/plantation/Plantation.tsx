@@ -7,11 +7,12 @@ interface PlantationProps {
     unit?: string;
 }
 
+
 export class Plantation {
     id: string;
     type: string;
-    dateStart: string;
-    dateEnd: string;
+    dateStart: any;
+    dateEnd: any;
     quantity: number;
     unit: string;
 
@@ -30,7 +31,7 @@ export class Plantation {
 
             this.id = Date.now().toString();
             this.type = '';
-            this.dateStart = today;
+            this.dateStart = undefined;
             this.dateEnd = undefined;
             this.quantity = 1;
             this.unit = undefined;

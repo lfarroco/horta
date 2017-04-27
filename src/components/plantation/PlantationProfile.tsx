@@ -5,6 +5,9 @@ import { Plantation } from "./Plantation";
 export interface PlantationProfileProps { plantation: Plantation; onSubmit: any; }
 export interface PlantationProfileState { plantation: Plantation; }
 
+import DatePicker from 'react-datepicker';
+import * as moment from 'moment';
+
 export class PlantationProfile extends React.Component<PlantationProfileProps, Plantation> {
 
     constructor(props: PlantationProfileProps) {
@@ -12,6 +15,7 @@ export class PlantationProfile extends React.Component<PlantationProfileProps, P
 
         this.state = this.props.plantation;
 
+        console.log(DatePicker);
     }
 
     render() {
@@ -38,10 +42,13 @@ export class PlantationProfile extends React.Component<PlantationProfileProps, P
 
                 <label>Plantado em:</label>
 
-                <input type="date" value={this.state.dateStart}
-                    name="dateStart"
+                <DatePicker
+                    dateFormat="DD/MM/YYYY"
+                    locale="pt-br"
                     className="form-control"
-                    onChange={e => { this.handleInputChange(e) }} />
+                    selected={this.state.dateStart}
+                    onChange={e => { this.handleDateChange(e, 'start') }}
+                />
 
             </div>
 
@@ -49,10 +56,13 @@ export class PlantationProfile extends React.Component<PlantationProfileProps, P
 
                 <label>Colher em:</label>
 
-                <input type="date" value={this.state.dateEnd}
-                    name="dateEnd"
+                <DatePicker
+                    dateFormat="DD/MM/YYYY"
+                    locale="pt-br"
                     className="form-control"
-                    onChange={e => { this.handleInputChange(e) }} />
+                    selected={this.state.dateEnd}
+                    onChange={e => { this.handleDateChange(e, 'end') }}
+                />
 
             </div>
 
@@ -79,9 +89,9 @@ export class PlantationProfile extends React.Component<PlantationProfileProps, P
 
             </div>
 
-            <div className="col-sm-12">
-                <input type="submit" value="Salvar" className="btn btn-info" />
-            </div>
+
+            <input type="submit" value="Salvar" className="btn btn-info" />
+
 
         </form>
 
@@ -106,6 +116,21 @@ export class PlantationProfile extends React.Component<PlantationProfileProps, P
         this.props.onSubmit(this.state);
 
         window.history.back();
+
+    }
+
+    handleDateChange(date: any, type: string) {
+
+        console.log(date);
+
+        if (type == 'start')
+            this.setState({
+                dateStart: date
+            });
+        else
+            this.setState({
+                dateEnd: date
+            });
 
     }
 }
