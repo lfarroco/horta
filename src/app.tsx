@@ -23,16 +23,20 @@ export class App extends React.Component<undefined, undefined> {
 
     render() {
         return <Router>
+		
+			<div>
 
-            <Navbar />
+				<Navbar />
 
-            <div className="container">
+				<div className="container">
 
-                <PlantationContainer />
+					<PlantationContainer />
 
-                <Route path="/harvests" component={HarvestList} />
+					<Route path="/harvests" component={HarvestList} />
 
-            </div>
+				</div>
+				
+			</div>
 
         </Router>;
     }

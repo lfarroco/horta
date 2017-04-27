@@ -26,9 +26,9 @@ export class Plantation {
             this.unit = props.unit;
         } else {
 
-            var today = new Date().toISOString()[0];
+            var today = new Date().toISOString().split('T')[0];
 
-            this.id = Date.now() + '';
+            this.id = Date.now().toString();
             this.type = '';
             this.dateStart = today;
             this.dateEnd = undefined;

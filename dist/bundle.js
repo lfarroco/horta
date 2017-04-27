@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 28);
+/******/ 	return __webpack_require__(__webpack_require__.s = 29);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -100,11 +100,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(37)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(38)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(36)();
+  module.exports = __webpack_require__(37)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
@@ -114,23 +114,23 @@ if (process.env.NODE_ENV !== 'production') {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__MemoryRouter__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__MemoryRouter__ = __webpack_require__(51);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_0__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Prompt__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Prompt__ = __webpack_require__(52);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_1__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Redirect__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Redirect__ = __webpack_require__(53);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_2__Redirect__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(18);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_3__Route__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(12);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__StaticRouter__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__StaticRouter__ = __webpack_require__(54);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_5__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Switch__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Switch__ = __webpack_require__(55);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_6__Switch__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__matchPath__ = __webpack_require__(13);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_7__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__withRouter__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__withRouter__ = __webpack_require__(56);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_8__withRouter__["a"]; });
 
 
@@ -531,6 +531,65 @@ module.exports = invariant;
 
 /***/ }),
 /* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(39);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(40);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(17);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(41);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(42);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(43);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(44);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(45);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(46);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(47);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(48);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(49);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_11__matchPath__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(50);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_12__withRouter__["a"]; });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -574,7 +633,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -636,7 +695,7 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -647,11 +706,11 @@ exports.locationsAreEqual = exports.createLocation = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _resolvePathname = __webpack_require__(56);
+var _resolvePathname = __webpack_require__(57);
 
 var _resolvePathname2 = _interopRequireDefault(_resolvePathname);
 
-var _valueEqual = __webpack_require__(57);
+var _valueEqual = __webpack_require__(58);
 
 var _valueEqual2 = _interopRequireDefault(_valueEqual);
 
@@ -705,7 +764,7 @@ var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a
 };
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -794,65 +853,6 @@ var createTransitionManager = function createTransitionManager() {
 };
 
 exports.default = createTransitionManager;
-
-/***/ }),
-/* 11 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(38);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserRouter", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(39);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HashRouter", function() { return __WEBPACK_IMPORTED_MODULE_1__HashRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(17);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(40);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MemoryRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(41);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "NavLink", function() { return __WEBPACK_IMPORTED_MODULE_4__NavLink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(42);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Prompt", function() { return __WEBPACK_IMPORTED_MODULE_5__Prompt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(43);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(44);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(45);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(46);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StaticRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__StaticRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(47);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Switch", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(48);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "matchPath", function() { return __WEBPACK_IMPORTED_MODULE_11__matchPath__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(49);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_12__withRouter__["a"]; });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /***/ }),
 /* 12 */
@@ -978,7 +978,7 @@ Router.childContextTypes = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_path_to_regexp__);
 
 
@@ -1065,7 +1065,7 @@ var matchPath = function matchPath(pathname) {
 
 
 
-var emptyFunction = __webpack_require__(7);
+var emptyFunction = __webpack_require__(8);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -1468,10 +1468,10 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var react_router_dom_1 = __webpack_require__(11);
-var Navbar_1 = __webpack_require__(59);
-var PlantationContainer_1 = __webpack_require__(23);
-var HarvestList_1 = __webpack_require__(22);
+var react_router_dom_1 = __webpack_require__(7);
+var Navbar_1 = __webpack_require__(21);
+var PlantationContainer_1 = __webpack_require__(25);
+var HarvestList_1 = __webpack_require__(23);
 var App = (function (_super) {
     __extends(App, _super);
     function App(props) {
@@ -1479,10 +1479,11 @@ var App = (function (_super) {
     }
     App.prototype.render = function () {
         return React.createElement(react_router_dom_1.BrowserRouter, null,
-            React.createElement(Navbar_1.Navbar, null),
-            React.createElement("div", { className: "container" },
-                React.createElement(PlantationContainer_1.PlantationContainer, null),
-                React.createElement(react_router_dom_1.Route, { path: "/harvests", component: HarvestList_1.HarvestList })));
+            React.createElement("div", null,
+                React.createElement(Navbar_1.Navbar, null),
+                React.createElement("div", { className: "container" },
+                    React.createElement(PlantationContainer_1.PlantationContainer, null),
+                    React.createElement(react_router_dom_1.Route, { path: "/harvests", component: HarvestList_1.HarvestList }))));
     };
     return App;
 }(React.Component));
@@ -1513,17 +1514,55 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var HarvestItem = (function (_super) {
-    __extends(HarvestItem, _super);
-    function HarvestItem() {
+var react_router_dom_1 = __webpack_require__(7);
+var Navbar = (function (_super) {
+    __extends(Navbar, _super);
+    function Navbar() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    HarvestItem.prototype.render = function () {
-        return React.createElement("div", null, this.props.harvest.type);
+    Navbar.prototype.render = function () {
+        return React.createElement("nav", { className: "navbar navbar-default" },
+            React.createElement("div", { className: "container-fluid" },
+                React.createElement("div", { className: "navbar-header" },
+                    React.createElement("button", { type: "button", className: "navbar-toggle collapsed", "data-toggle": "collapse", "data-target": "#navbar", "aria-expanded": "false", "aria-controls": "navbar" },
+                        React.createElement("span", { className: "sr-only" }, "Toggle navigation"),
+                        React.createElement("span", { className: "icon-bar" }),
+                        React.createElement("span", { className: "icon-bar" }),
+                        React.createElement("span", { className: "icon-bar" })),
+                    React.createElement("a", { className: "navbar-brand", href: "#" }, "Project name")),
+                React.createElement("div", { id: "navbar", className: "navbar-collapse collapse" },
+                    React.createElement("ul", { className: "nav navbar-nav" },
+                        React.createElement("li", { className: "dropdown" },
+                            React.createElement("a", { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" },
+                                React.createElement("span", { className: "glyphicon glyphicon-leaf", "aria-hidden": "true" }),
+                                " Planta\u00E7\u00F5es",
+                                React.createElement("span", { className: "caret" })),
+                            React.createElement("ul", { className: "dropdown-menu" },
+                                React.createElement("li", null,
+                                    React.createElement(react_router_dom_1.Link, { to: "/plantations" },
+                                        React.createElement("span", { className: "glyphicon glyphicon-leaf", "aria-hidden": "true" }),
+                                        " Minhas Planta\u00E7\u00F5es")),
+                                React.createElement("li", null,
+                                    React.createElement(react_router_dom_1.Link, { to: "/new/plantation" },
+                                        React.createElement("span", { className: "glyphicon glyphicon-plus", "aria-hidden": "true" }),
+                                        " Adicionar Planta\u00E7\u00E3o")))),
+                        React.createElement("li", null,
+                            React.createElement(react_router_dom_1.Link, { to: "/harvests" },
+                                React.createElement("span", { className: "glyphicon glyphicon-box", "aria-hidden": "true" }),
+                                "  Colheitas"))),
+                    React.createElement("ul", { className: "nav navbar-nav navbar-right" },
+                        React.createElement("li", { className: "active" },
+                            React.createElement("a", { href: "./" },
+                                "Default ",
+                                React.createElement("span", { className: "sr-only" }, "(current)"))),
+                        React.createElement("li", null,
+                            React.createElement("a", { href: "../navbar-static-top/" }, "Static top")),
+                        React.createElement("li", null,
+                            React.createElement("a", { href: "../navbar-fixed-top/" }, "Fixed top"))))));
     };
-    return HarvestItem;
+    return Navbar;
 }(React.Component));
-exports.HarvestItem = HarvestItem;
+exports.Navbar = Navbar;
 
 
 /***/ }),
@@ -1544,7 +1583,38 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var HarvestItem_1 = __webpack_require__(21);
+var HarvestItem = (function (_super) {
+    __extends(HarvestItem, _super);
+    function HarvestItem() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    HarvestItem.prototype.render = function () {
+        return React.createElement("div", null, this.props.harvest.type);
+    };
+    return HarvestItem;
+}(React.Component));
+exports.HarvestItem = HarvestItem;
+
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(0);
+var HarvestItem_1 = __webpack_require__(22);
 var HarvestList = (function (_super) {
     __extends(HarvestList, _super);
     function HarvestList(props) {
@@ -1574,7 +1644,39 @@ exports.HarvestList = HarvestList;
 
 
 /***/ }),
-/* 23 */
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var Plantation = (function () {
+    function Plantation(props) {
+        if (props) {
+            this.id = props.id;
+            this.type = props.type;
+            this.dateStart = props.dateStart;
+            this.dateEnd = props.dateEnd;
+            this.quantity = props.quantity;
+            this.unit = props.unit;
+        }
+        else {
+            var today = new Date().toISOString().split('T')[0];
+            this.id = Date.now().toString();
+            this.type = '';
+            this.dateStart = today;
+            this.dateEnd = undefined;
+            this.quantity = 1;
+            this.unit = undefined;
+        }
+    }
+    return Plantation;
+}());
+exports.Plantation = Plantation;
+
+
+/***/ }),
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1591,10 +1693,10 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var react_router_dom_1 = __webpack_require__(11);
-var Plantation_1 = __webpack_require__(58);
-var PlantationList_1 = __webpack_require__(24);
-var PlantationProfile_1 = __webpack_require__(27);
+var react_router_dom_1 = __webpack_require__(7);
+var Plantation_1 = __webpack_require__(24);
+var PlantationList_1 = __webpack_require__(26);
+var PlantationProfile_1 = __webpack_require__(28);
 var PlantationContainer = (function (_super) {
     __extends(PlantationContainer, _super);
     function PlantationContainer(props) {
@@ -1664,7 +1766,7 @@ exports.PlantationContainer = PlantationContainer;
 
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1681,8 +1783,8 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var PlantationListItem_1 = __webpack_require__(25);
-var react_router_dom_1 = __webpack_require__(11);
+var PlantationListItem_1 = __webpack_require__(27);
+var react_router_dom_1 = __webpack_require__(7);
 var PlantationList = (function (_super) {
     __extends(PlantationList, _super);
     function PlantationList() {
@@ -1708,7 +1810,7 @@ exports.PlantationList = PlantationList;
 
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1743,8 +1845,7 @@ exports.PlantationListItem = PlantationListItem;
 
 
 /***/ }),
-/* 26 */,
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1816,7 +1917,7 @@ exports.PlantationProfile = PlantationProfile;
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1829,7 +1930,7 @@ ReactDOM.render(React.createElement(app_1.App, null), document.getElementById("e
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1849,11 +1950,11 @@ var _invariant = __webpack_require__(6);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _LocationUtils = __webpack_require__(9);
+var _LocationUtils = __webpack_require__(10);
 
 var _PathUtils = __webpack_require__(5);
 
-var _createTransitionManager = __webpack_require__(10);
+var _createTransitionManager = __webpack_require__(11);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -2143,7 +2244,7 @@ var createBrowserHistory = function createBrowserHistory() {
 exports.default = createBrowserHistory;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2161,11 +2262,11 @@ var _invariant = __webpack_require__(6);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _LocationUtils = __webpack_require__(9);
+var _LocationUtils = __webpack_require__(10);
 
 var _PathUtils = __webpack_require__(5);
 
-var _createTransitionManager = __webpack_require__(10);
+var _createTransitionManager = __webpack_require__(11);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -2471,7 +2572,7 @@ var createHashHistory = function createHashHistory() {
 exports.default = createHashHistory;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2489,9 +2590,9 @@ var _warning2 = _interopRequireDefault(_warning);
 
 var _PathUtils = __webpack_require__(5);
 
-var _LocationUtils = __webpack_require__(9);
+var _LocationUtils = __webpack_require__(10);
 
-var _createTransitionManager = __webpack_require__(10);
+var _createTransitionManager = __webpack_require__(11);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -2647,7 +2748,7 @@ var createMemoryHistory = function createMemoryHistory() {
 exports.default = createMemoryHistory;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2704,7 +2805,16 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 33 */
+/* 34 */
+/***/ (function(module, exports) {
+
+module.exports = Array.isArray || function (arr) {
+  return Object.prototype.toString.call(arr) == '[object Array]';
+};
+
+
+/***/ }),
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isarray = __webpack_require__(34)
@@ -3136,16 +3246,7 @@ function pathToRegexp (path, keys, options) {
 
 
 /***/ }),
-/* 34 */
-/***/ (function(module, exports) {
-
-module.exports = Array.isArray || function (arr) {
-  return Object.prototype.toString.call(arr) == '[object Array]';
-};
-
-
-/***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3161,7 +3262,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 if (process.env.NODE_ENV !== 'production') {
-  var invariant = __webpack_require__(8);
+  var invariant = __webpack_require__(9);
   var warning = __webpack_require__(14);
   var ReactPropTypesSecret = __webpack_require__(16);
   var loggedTypeFailures = {};
@@ -3214,7 +3315,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3229,8 +3330,8 @@ module.exports = checkPropTypes;
 
 
 
-var emptyFunction = __webpack_require__(7);
-var invariant = __webpack_require__(8);
+var emptyFunction = __webpack_require__(8);
+var invariant = __webpack_require__(9);
 
 module.exports = function() {
   // Important!
@@ -3275,7 +3376,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3290,12 +3391,12 @@ module.exports = function() {
 
 
 
-var emptyFunction = __webpack_require__(7);
-var invariant = __webpack_require__(8);
+var emptyFunction = __webpack_require__(8);
+var invariant = __webpack_require__(9);
 var warning = __webpack_require__(14);
 
 var ReactPropTypesSecret = __webpack_require__(16);
-var checkPropTypes = __webpack_require__(35);
+var checkPropTypes = __webpack_require__(36);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -3761,7 +3862,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3769,7 +3870,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_createBrowserHistory__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_createBrowserHistory__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_createBrowserHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_history_createBrowserHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router__ = __webpack_require__(2);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -3821,7 +3922,7 @@ BrowserRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (BrowserRouter);
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3829,7 +3930,7 @@ BrowserRouter.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_createHashHistory__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_createHashHistory__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_createHashHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_history_createHashHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router__ = __webpack_require__(2);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -3880,7 +3981,7 @@ HashRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (HashRouter);
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3889,7 +3990,7 @@ HashRouter.propTypes = {
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3966,7 +4067,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["a"] = (NavLink);
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3975,7 +4076,7 @@ NavLink.defaultProps = {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3984,7 +4085,7 @@ NavLink.defaultProps = {
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3993,7 +4094,7 @@ NavLink.defaultProps = {
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4002,7 +4103,7 @@ NavLink.defaultProps = {
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4011,7 +4112,7 @@ NavLink.defaultProps = {
 
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4020,7 +4121,7 @@ NavLink.defaultProps = {
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4029,7 +4130,7 @@ NavLink.defaultProps = {
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4038,7 +4139,7 @@ NavLink.defaultProps = {
 
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4046,7 +4147,7 @@ NavLink.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_createMemoryHistory__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_createMemoryHistory__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_createMemoryHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_history_createMemoryHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Router__ = __webpack_require__(12);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4098,7 +4199,7 @@ MemoryRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (MemoryRouter);
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4184,7 +4285,7 @@ Prompt.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Prompt);
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4270,7 +4371,7 @@ Redirect.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Redirect);
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4446,7 +4547,7 @@ StaticRouter.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (StaticRouter);
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4532,7 +4633,7 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Switch);
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4540,7 +4641,7 @@ Switch.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(18);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -4577,7 +4678,7 @@ var withRouter = function withRouter(Component) {
 /* harmony default export */ __webpack_exports__["a"] = (withRouter);
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4653,7 +4754,7 @@ var resolvePathname = function resolvePathname(to) {
 module.exports = resolvePathname;
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4697,107 +4798,6 @@ var valueEqual = function valueEqual(a, b) {
 };
 
 exports.default = valueEqual;
-
-/***/ }),
-/* 58 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var Plantation = (function () {
-    function Plantation(props) {
-        if (props) {
-            this.id = props.id;
-            this.type = props.type;
-            this.dateStart = props.dateStart;
-            this.dateEnd = props.dateEnd;
-            this.quantity = props.quantity;
-            this.unit = props.unit;
-        }
-        else {
-            var today = new Date().toISOString()[0];
-            this.id = Date.now() + '';
-            this.type = '';
-            this.dateStart = today;
-            this.dateEnd = undefined;
-            this.quantity = 1;
-            this.unit = undefined;
-        }
-    }
-    return Plantation;
-}());
-exports.Plantation = Plantation;
-
-
-/***/ }),
-/* 59 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(0);
-var react_router_dom_1 = __webpack_require__(11);
-var Navbar = (function (_super) {
-    __extends(Navbar, _super);
-    function Navbar() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Navbar.prototype.render = function () {
-        return React.createElement("nav", { className: "navbar navbar-default" },
-            React.createElement("div", { className: "container-fluid" },
-                React.createElement("div", { className: "navbar-header" },
-                    React.createElement("button", { type: "button", className: "navbar-toggle collapsed", "data-toggle": "collapse", "data-target": "#navbar", "aria-expanded": "false", "aria-controls": "navbar" },
-                        React.createElement("span", { className: "sr-only" }, "Toggle navigation"),
-                        React.createElement("span", { className: "icon-bar" }),
-                        React.createElement("span", { className: "icon-bar" }),
-                        React.createElement("span", { className: "icon-bar" })),
-                    React.createElement("a", { className: "navbar-brand", href: "#" }, "Project name")),
-                React.createElement("div", { id: "navbar", className: "navbar-collapse collapse" },
-                    React.createElement("ul", { className: "nav navbar-nav" },
-                        React.createElement("li", { className: "dropdown" },
-                            React.createElement("a", { href: "#", className: "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" },
-                                React.createElement("span", { className: "glyphicon glyphicon-leaf", "aria-hidden": "true" }),
-                                " Planta\u00E7\u00F5es",
-                                React.createElement("span", { className: "caret" })),
-                            React.createElement("ul", { className: "dropdown-menu" },
-                                React.createElement("li", null,
-                                    React.createElement(react_router_dom_1.Link, { to: "/plantations" },
-                                        React.createElement("span", { className: "glyphicon glyphicon-leaf", "aria-hidden": "true" }),
-                                        " Minhas Planta\u00E7\u00F5es")),
-                                React.createElement("li", null,
-                                    React.createElement(react_router_dom_1.Link, { to: "/new/plantation" },
-                                        React.createElement("span", { className: "glyphicon glyphicon-plus", "aria-hidden": "true" }),
-                                        " Adicionar Planta\u00E7\u00E3o")))),
-                        React.createElement("li", null,
-                            React.createElement(react_router_dom_1.Link, { to: "/harvests" },
-                                React.createElement("span", { className: "glyphicon glyphicon-box", "aria-hidden": "true" }),
-                                "  Colheitas"))),
-                    React.createElement("ul", { className: "nav navbar-nav navbar-right" },
-                        React.createElement("li", { className: "active" },
-                            React.createElement("a", { href: "./" },
-                                "Default ",
-                                React.createElement("span", { className: "sr-only" }, "(current)"))),
-                        React.createElement("li", null,
-                            React.createElement("a", { href: "../navbar-static-top/" }, "Static top")),
-                        React.createElement("li", null,
-                            React.createElement("a", { href: "../navbar-fixed-top/" }, "Fixed top"))))));
-    };
-    return Navbar;
-}(React.Component));
-exports.Navbar = Navbar;
-
 
 /***/ })
 /******/ ]);
