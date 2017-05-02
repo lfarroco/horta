@@ -15,6 +15,7 @@
     "@types/react-dom": "^15.5.0",
     "@types/react-router-dom": "^4.0.4",
     "bootstrap": "^3.3.7",
+    "fixed-data-table": "^0.6.4",
     "jquery": "^3.2.1",
     "moment": "^2.18.1",
     "react": "^15.5.4",
