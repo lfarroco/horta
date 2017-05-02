@@ -11,7 +11,7 @@ import { Navbar } from "./Navbar";
 
 import { PlantationContainer } from "./components/plantation/PlantationContainer";
 
-import { HarvestList } from "./components/harvest/HarvestList";
+import { HarvestContainer } from "./components/harvest/HarvestContainer";
 
 export class App extends React.Component<undefined, undefined> {
 
@@ -28,11 +28,11 @@ export class App extends React.Component<undefined, undefined> {
 
 				<Navbar />
 
-				<div className="container">
-
+				<div className="container">					
+					
 					<PlantationContainer />
-
-					<Route path="/harvests" component={HarvestList} />
+					
+					<HarvestContainer />					
 
 				</div>
 				

@@ -1,47 +1,43 @@
 import * as React from "react";
 
 import { Harvest } from "./Harvest";
-import { HarvestItem } from "./HarvestItem";
+import { HarvestListItem } from "./HarvestListItem";
+import { Link } from 'react-router-dom'
 
-export interface HarvestListState { harvests: Harvest[]; }
+interface HarvestListState { harvests: Harvest[]; }
+interface HarvestListProps { harvests: Harvest[]; }
 
+export class HarvestList extends React.Component<HarvestListProps, undefined> {
 
-export class HarvestList extends React.Component<undefined, HarvestListState> {
-
-    props: Readonly<any>;
-
-    constructor(props: null) {
-        super(props);
-        this.state = {
-            harvests: [
-                { id: 'asdasd', type: 'asdasd', quantity: 2121, unit: 'asd', date: 'asds' },
-                { id: 'asdasd', type: 'aaaa', quantity: 2121, unit: 'asd', date: 'asds' },
-
-                { id: 'asdasd', type: 'azzzzsdasd', quantity: 2121, unit: 'asd', date: 'asds' },
-
-                { id: 'asdasd', type: 'aasdasd', quantity: 2121, unit: 'asd', date: 'asds' },
-
-
-            ]
-        };
-    }
 
     render() {
 
-        var harvests = this.state.harvests.map((harvest, index) => {
+        console.log(this.props)
 
-            return <div className="list-group-item"
-                key={index}>
-                <HarvestItem
+        var Harvests = this.props.harvests.map((harvest, index) => {
+
+            return <Link key={index}
+                to={`harvest/${harvest.id}`}
+                className="list-group-item">
+
+                <HarvestListItem
                     harvest={harvest} />
-            </div>
+
+            </Link>
+
 
         });
 
         return <div>
-            <h2>Colheitas</h2>
-            <div className="list-group">{harvests}</div>
-        </div>;
+
+            <div>Minhas Colheitas</div>
+
+            <div className="form-group">
+                <Link to="/new/harvest" className="btn btn-success">
+                    <span className="glyphicon glyphicon-plus"></span> Adicionar Plantação</Link>
+            </div>
+
+            <div className="list-group">{Harvests}</div></div>;
 
     }
 }
