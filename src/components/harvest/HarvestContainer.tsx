@@ -12,7 +12,9 @@ import { Harvest } from "./Harvest"
 import { HarvestList } from "./HarvestList"
 import { HarvestProfile } from "./HarvestProfile"
 
-interface HarvestContainerProps { }
+//import * as firebase from "firebase/app";
+
+interface HarvestContainerProps { firebase: firebase.database.Reference }
 interface HarvestContainerState { harvests: Harvest[]; selectedHarvest: Harvest }
 
 export class HarvestContainer extends React.Component<HarvestContainerProps, HarvestContainerState> {
@@ -30,7 +32,7 @@ export class HarvestContainer extends React.Component<HarvestContainerProps, Har
 
         storedHarvests.forEach((p: Harvest) => {
 
-            p.date = moment(p.date);            
+            p.date = moment(p.date);
 
         });
 

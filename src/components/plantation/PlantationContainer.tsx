@@ -12,33 +12,55 @@ import { Plantation } from "./Plantation"
 import { PlantationList } from "./PlantationList"
 import { PlantationProfile } from "./PlantationProfile"
 
-interface PlantationContainerProps { }
-interface PlantationContainerState { plantations: Plantation[]; selectedPlantation: Plantation }
+interface PlantationContainerProps { firebase: any }
+interface PlantationContainerState { plantations: any; selectedPlantation: Plantation }
 
 export class PlantationContainer extends React.Component<PlantationContainerProps, PlantationContainerState> {
 
+    snapshot: any;
+    plantationsRef: any;
+
     constructor(props: PlantationContainerProps) {
+
         super(props);
 
-        console.log('props::', props);
-
-        var storedPlantations = JSON.parse(localStorage.getItem('plantations'));
-        if (!storedPlantations) {
-            localStorage.setItem('plantations', JSON.stringify([]));
-            storedPlantations = [];
-        }
-
-        storedPlantations.forEach((p: Plantation) => {
-
-            p.dateStart = moment(p.dateStart);
-            p.dateEnd = moment(p.dateStart);
-
-        });
+        this.plantationsRef = this.props.firebase.child('plantations');
 
         this.state = {
-            plantations: storedPlantations,
+            plantations: [],
             selectedPlantation: undefined
-        }
+        };
+
+        this.plantationsRef.on('value', (snapshot: any) => {
+
+
+
+            var items = snapshot.val();
+
+            console.log(items);
+
+            var aux = [];
+
+            for (var i in items) {
+
+                console.log(items[i])
+
+                aux.push({
+                    type: items[i].type,
+                    id: items[i].type.key,
+                    dateStart: moment(items[i].dateStart),
+                    dateEnd: moment(items[i].dateEnd),
+                    quantity: items[i].quantity,
+                    unit: items[i].unit
+                });
+
+            }
+
+            this.setState({
+                plantations: aux
+            });
+
+        });
 
     }
 
@@ -78,11 +100,25 @@ export class PlantationContainer extends React.Component<PlantationContainerProp
     }
 
     addPlantation(plantation: Plantation) {
-        console.log('adding', plantation);
+
+
+        //p.dateStart = plantation.dateStart.toUTCString();
+        //p.dateEnd = plantation.dateEnd.toUTCString();
+
+        var p = {
+            id: plantation.id,
+            type: plantation.type,
+            dateStart: plantation.dateStart.format(),
+            dateEnd: plantation.dateEnd.format(),
+            quantity: plantation.quantity,
+            unit: plantation.unit
+
+        };
 
         var plantations = this.state.plantations.concat(plantation);
         this.setState({ plantations: plantations });
-        localStorage.setItem('plantations', JSON.stringify(plantations));
+
+        this.plantationsRef.push().set(p);
 
     }
 
